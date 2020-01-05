@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Wrapper from './Contents/Wrapper';
 
@@ -20,8 +19,8 @@ class App extends React.Component {
 function Skipmenu()  {
   return (
     <div id="skipmenu">
-      <a href="#">Go to Main Menu</a>
-      <a href="#">Go to Products</a>
+      {/* <a href="#">Go to Main Menu</a>
+      <a href="#">Go to Products</a> */}
     </div>
   )
 }

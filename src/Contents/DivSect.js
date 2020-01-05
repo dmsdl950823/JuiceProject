@@ -4,8 +4,8 @@ class Imagesect extends Component {
     render() {
       return (
           <section>
-              <Big_Imagesect />
-              <small_Imagesect />
+              <BigImagesect />
+              <smallImagesect />
           </section>
       )
     }
@@ -13,7 +13,7 @@ class Imagesect extends Component {
 
 
 // Big image
-class Big_Imagesect extends Component {
+class BigImagesect extends Component {
     render() {
       return (
           <div>
@@ -24,7 +24,7 @@ class Big_Imagesect extends Component {
   }
 
   // small image + article
-  class small_Imagesect extends Component {
+  class smallImagesect extends Component {
     render() {
       return (
           <div>

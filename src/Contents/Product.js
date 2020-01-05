@@ -6,16 +6,16 @@ class Products extends Component {
     render() {
       return (
           <section>
-              <Products_small />
-              <Product_big />
-              <Products_small />
+              <ProductsSmall />
+              <ProductBig />
+              <ProductsSmall />
           </section>
       )
     }
   }
 
 
-class Product_big extends Component {
+class ProductBig extends Component {
     render() {
         return (
             <div>
@@ -25,7 +25,7 @@ class Product_big extends Component {
     }
 }
 
-class Products_small extends Component {
+class ProductsSmall extends Component {
     render() {
         return (
             <div>

@@ -29,6 +29,7 @@ class Wrapper extends React.Component {
             case 'product':
                 return(
                     <Product />
+                    // <div></div>
                 );
             case 'footer':
                 return (
