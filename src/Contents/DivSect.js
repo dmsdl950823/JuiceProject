@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
+import './../excss.css';
 
 class Imagesect extends Component {
     render() {
       return (
-          <section>
+          <section className="red">
               <BigImagesect />
-              <smallImagesect />
+              <SmallImagesect />
           </section>
       )
     }
 }
 
 
+  // small image + article
+  class SmallImagesect extends Component {
+    render() {
+      return (
+        <div>
+            <article>lorem ipsum..</article>
+            <div>디자인 요소입니다</div>      
+
+            <div>small image part</div>
+        </div>
+      )
+    }
+  }
+
+
 // Big image
 class BigImagesect extends Component {
     render() {
       return (
-          <div>
-              이부분은 큰 이미지입니다.
-          </div>
+          <div> big image part</div>
       )
     }
   }
 
-  // small image + article
-  class smallImagesect extends Component {
-    render() {
-      return (
-          <div>
-              <article>lorem ipsum..</article>
-              <div>디자인 요소입니다</div>      
-
-              <div>작은 이미지입니다.</div>
-          </div>
-      )
-    }
-  }
 
   export default Imagesect;

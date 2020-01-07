@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import FooterSect from './Contents/Footer';
 import Header from './Contents/Header';
 import Product from './Contents/Product';
-import Footer from './Contents/Footer';
 import Imagesect from './Contents/DivSect';
 
 import './App.css';
@@ -14,8 +12,8 @@ export default class App extends React.Component {
     return (
       <div id="wrapper">
         <Skipmenu />
-        <Wrapper />
-        <FooterSect />
+        <Wrapper />　
+      
       </div>
       
     )
@@ -40,11 +38,7 @@ class Wrapper extends React.Component {
             <Header />
             <Product />
             <Imagesect />
-            <Footer />
-            {/* <Sections sect='header'/>
-            <Sections sect='product'/>
-            <Sections />
-            <Sections sect='footer'/> */}
+            <FooterSect />
         </div>
     )
   }
@@ -53,30 +47,37 @@ class Wrapper extends React.Component {
 
 
 
-class Sections extends Component {
-  render() {
-      const contents = this.props.sect;
-      switch (contents){
-          case 'header':
-              return (
-                  <Header />
-              );
-          case 'product':
-              return(
-                  <Product />
-                  // <div></div>
-              );
-          case 'footer':
-              return (
-                  <Footer />
-              )
-          default:
-              return (
-                  <Imagesect />
-              )
-      }
-  }
-}
+
+
+            /* <Sections sect='header'/>
+            <Sections sect='product'/>
+            <Sections />
+            <Sections sect='footer'/> */
+
+// class Sections extends Component {
+//   render() {
+//       const contents = this.props.sect;
+//       switch (contents){
+//           case 'header':
+//               return (
+//                   <Header />
+//               );
+//           case 'product':
+//               return(
+//                   <Product />
+//                   // <div></div>
+//               );
+//           case 'footer':
+//               return (
+//                   <Footer />
+//               )
+//           default:
+//               return (
+//                   <Imagesect />
+//               )
+//       }
+//   }
+// }
 
 
 

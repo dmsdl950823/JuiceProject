@@ -19,7 +19,7 @@ class ProductBig extends Component {
     render() {
         return (
             <div>
-                <div>큰 이미지</div>
+                <div>big product</div>
             </div>
         )
     }
@@ -29,8 +29,8 @@ class ProductsSmall extends Component {
     render() {
         return (
             <div>
-                <div>이미지 1</div>
-                <div>이미지 2</div>
+                <div>small product1</div>
+                <div>small product2</div>
             </div>
         )
     }

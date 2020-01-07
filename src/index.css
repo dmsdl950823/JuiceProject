@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body, div, html, h1, ul, li, a, section, nav {margin: 0; padding: 0;}
+ul, li {list-style: none;}
+a:link,
+a:visited,
+a:hover {text-decoration: none; color: #333}
+a:active,
+a:focus {text-decoration: none; color: #333}
+
+nav, section {display: block}

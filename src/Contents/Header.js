@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Imagesect from './DivSect';
+import './../excss.css';
 
 class Header extends Component {
     render() {
         return (
             <section>
-                <header>
-                    <h1>Logo</h1>
+                <header className="red">
+                    <h1>Logo here</h1>
                     <Nav />
                 </header>
-
+                
                 <Imagesect />
             </section>
         )
@@ -20,7 +21,7 @@ class Header extends Component {
 class Nav extends Component {
     render(){
         return (
-            <nav>
+            <nav className="blue">
                 <ul>
                     <li>COMPANY</li>
                     <li>MENU</li>

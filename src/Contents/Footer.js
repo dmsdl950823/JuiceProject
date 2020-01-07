@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 class FooterSect extends Component {
     render() {
       return (
-          <div>
+          <section className="red">
               <MoreSect />
               <Footer />
-          </div>
+          </section>
       )
     }
   }
@@ -17,8 +17,8 @@ class Footer extends Component {
     render() {
       return (
         <footer>
-            <div>발발</div>
-            <div>발발</div>
+            <div>footer contents</div>
+            <div>footer contents</div>
         </footer>
       )
     }
@@ -28,10 +28,10 @@ class MoreSect extends Component {
     render() {
         return (
             <div>
-                <article></article>
-                <article></article>
-                <article></article>
-                <article></article>
+                <article>news1</article>
+                <article>news2</article>
+                <article>news3</article>
+                <article>news4</article>
             </div>
         )
     }
