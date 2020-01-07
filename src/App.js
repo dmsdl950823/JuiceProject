@@ -23,4 +23,31 @@ function App() {
   );
 }
 
+// import './App.css';
+// import Wrapper from './Contents/Wrapper';
+
+
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div id="wrapper">
+//         <Skipmenu />
+//         <Wrapper />
+//       </div>
+      
+//     )
+//   }
+// }
+
+// // skip menu
+// function Skipmenu()  {
+//   return (
+//     <div id="skipmenu">
+//       {/* <a href="#">Go to Main Menu</a>
+//       <a href="#">Go to Products</a> */}
+//     </div>
+//   )
+// }
+
+
 export default App;
