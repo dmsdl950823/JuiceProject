@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Imagesect from './Header.js';
+import Imagesect from './DivSect';
 
 class Header extends Component {
     render() {
