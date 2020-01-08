@@ -1,0 +1,24 @@
+.rightmargin {
+    margin-right: 15px;
+}
+
+.leftmargin {
+    margin-left: 15px;
+}
+
+.smallAdImageWrap {
+    border: 1px solid blueviolet;
+    width: 560px;
+}
+
+.bigAdImage {
+    width: 694px;
+    height: 694px;
+    background-color: blue;
+}
+
+.smallAdImage {
+    width: 491px;
+    height: 491px;
+    background-color: pink;
+}

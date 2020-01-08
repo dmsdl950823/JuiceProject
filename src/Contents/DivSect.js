@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import './../excss.css';
+import './../Css/DivSect.css';
 
 class Imagesect extends Component {
-    render() {
-      return (
-          <section className="red">
+  render() {
+      if (this.props.adImg === 'header') {
+        return (
+            <section className="sect red cf">
+                <BigImagesect />
+                <SmallImagesect margin="left"/>
+            </section>
+        )
+      } else {
+        return (
+          <section className="sect red cf">
+              <SmallImagesect margin="right"/>
               <BigImagesect />
-              <SmallImagesect />
           </section>
       )
+      }
     }
 }
 
@@ -16,12 +26,15 @@ class Imagesect extends Component {
   // small image + article
   class SmallImagesect extends Component {
     render() {
+      const marginStyle = this.props.margin;
+      const newClassName = marginStyle + 'margin flt_left smallAdImageWrap'
+  
       return (
-        <div>
-            <article>lorem ipsum..</article>
+        <div className={newClassName}>
+            <article>lorem ipsum..</article> 
             <div>디자인 요소입니다</div>      
 
-            <div>small image part</div>
+            <div className="smallAdImage">small image part</div>
         </div>
       )
     }
@@ -32,7 +45,7 @@ class Imagesect extends Component {
 class BigImagesect extends Component {
     render() {
       return (
-          <div> big image part</div>
+          <div className="bigAdImage flt_left"> big image part</div>
       )
     }
   }

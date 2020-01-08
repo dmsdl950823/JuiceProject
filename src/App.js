@@ -4,6 +4,7 @@ import Header from './Contents/Header';
 import Product from './Contents/Product';
 import Imagesect from './Contents/DivSect';
 
+import SassComponent from './SassComponent'
 import './App.css';
 
 
@@ -14,6 +15,7 @@ export default class App extends React.Component {
         <Skipmenu />
         <Wrapper />　
       
+        {/* <SassComponent /> */}
       </div>
       
     )
@@ -34,10 +36,10 @@ class Wrapper extends React.Component {
   render() {
     return (
         <div id="wrapper">
-            <div>background...</div>
+            {/* <div>background...</div> */}
             <Header />
             <Product />
-            <Imagesect />
+            <Imagesect adImg='footAd'/>
             <FooterSect />
         </div>
     )
@@ -78,39 +80,4 @@ class Wrapper extends React.Component {
 //       }
 //   }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function App() {
-  //   return (
-  //     <div className="App">
-  //       <header className="App-header">
-  //         <img src={logo} className="App-logo" alt="logo" />
-  //         <p>
-  //           Edit <code>src/App.js</code> and save to reload.
-  //         </p>
-  //         <a
-  //           className="App-link"
-  //           href="https://reactjs.org"
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //         >
-  //           Learn React
-  //         </a>
-  //       </header>
-  //     </div>
-  //   );
-  // }
-
 

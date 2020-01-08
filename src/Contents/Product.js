@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
+import './../Css/Product.css'
 
 
 class Products extends Component {
     render() {
       return (
-          <section>
+          <section className="sect cf">
+              <h2 className="flt_left SectTit">Product</h2>
               <ProductsSmall />
               <ProductBig />
               <ProductsSmall />
@@ -18,8 +19,10 @@ class Products extends Component {
 class ProductBig extends Component {
     render() {
         return (
-            <div>
-                <div>big product</div>
+            <div className="flt_left">
+                <div className="bProduct">
+                    <div>big product img</div>
+                </div>
             </div>
         )
     }
@@ -28,9 +31,9 @@ class ProductBig extends Component {
 class ProductsSmall extends Component {
     render() {
         return (
-            <div>
-                <div>small product1</div>
-                <div>small product2</div>
+            <div className="flt_left sProductWrap">
+                <div className="sProduct">small product1 img</div>
+                <div className="sProduct">small product2</div>
             </div>
         )
     }
