@@ -1,31 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Merriweather+Sans&display=swap');
+
+
 #wrapper {
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#container {
+  width: 1366px;
+  height: 768px;
+  margin: 55px auto;
+  position: relative;
+  padding-top: 45px;
 }
 
 .sect {
-  width: 1366px; /* maxsize of responsive */
-  margin: 0 auto;
-  height: 768px;
+  width: 100%; /* maxsize of responsive */
+  height: 100%;
+  border: 1px solid green
 }
 
 
 /* Header */
 .header {
   width: 100%;
-  height: 70px;
-  background-color: #ffe6e2
-}
-
-.headerInner {
-  width: 1366px;
-  margin: 0 auto;
+  height: 45px;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  padding: 0 91px;
 }
 
 .logo {
-  width: 393px;
+  width: 142px;
   height: 70px;
-  background-color: #f58381;
-  background: linear-gradient(37deg, #e56d6d, #f58381 20%, #f58381);
   position: relative;
 }
 
@@ -36,25 +44,24 @@
   right: -80px;
   width: 0px;
   height: 0px;
-  border-left: 80px solid #f58381;
-  border-bottom: 70px solid transparent;
 }
 
 .navMenu {
-  min-width: 856px;
-  height: 70px
+  min-width: 585px;
+  height: 45px
 }
 .navMenu > li{
   float: left;
-  width: 25%;
+  width: 20%;
   height: 100%;
-  line-height: 70px;
-  text-align: center;
+  line-height: 45px;
+  text-align: right;
 }
 
 .navMenu > li > a {
-  color: #d64c65;
-  font-size: 30px;
+  color: #212d2f;
+  font-size: 20px;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .SectTit {

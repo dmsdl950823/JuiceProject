@@ -6,12 +6,14 @@ import Imagesect from './Contents/DivSect';
 
 import SassComponent from './SassComponent'
 import './App.css';
+import './Css/Background.css';
 
 
 export default class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
+        <Background />
         <Skipmenu />
         <Wrapper />　
       
@@ -35,17 +37,29 @@ function Skipmenu()  {
 class Wrapper extends React.Component {
   render() {
     return (
-        <div id="wrapper">
-            {/* <div>background...</div> */}
+        <div id="container">
             <Header />
-            <Product />
-            <Imagesect adImg='footAd'/>
-            <FooterSect />
+            <Imagesect adImg='header'/>
+
+            {/* <Product /> */}
+            {/* <Imagesect adImg='footAd'/>
+            <FooterSect /> */}
         </div>
     )
   }
 }
 
+function Background() {
+  return (
+    <div className="backgroundWraper">
+      <ul className="backgroundColor cf">
+        <li><i></i></li>
+        <li><i></i></li>
+        <li><i></i></li>
+      </ul>
+    </div>
+  )
+}
 
 
 

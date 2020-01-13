@@ -1,3 +1,5 @@
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,10 +13,14 @@ code {
     monospace;
 }
 
-body, div, html, h1, h2, ul, li, a, section, nav {
+body, span, div, html, h1, h2, h3, ul, li, p, a, section, nav, header, i, article {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+body {
+  overflow-x: hidden;
 }
 
 ul, li {
@@ -29,8 +35,11 @@ a:hover {
 a:active,
 a:focus {text-decoration: none; color: #333}
 
-nav, section {display: block}
+nav, section, article {display: block}
 
+img {
+  border: none;
+}
 
 #skipmenu a {
   background-color: #eed0d0;
@@ -62,4 +71,15 @@ nav, section {display: block}
 }
 .flt_right {
   float: right;
+}
+
+._skip {
+  text-indent: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 0px;
+  position: absolute;
+  top: -99px;
+  left: -99px;
 }
