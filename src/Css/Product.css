@@ -1,14 +1,10 @@
 .sProductWrap > div:first-child {
   margin-bottom: 16px;
 }
-/* .sProductWrap > div:last-child{
-    
-} */
 
 .sProduct {
   width: 330px;
   height: 330px;
-  background-color: teal;
 }
 
 .bProduct {
