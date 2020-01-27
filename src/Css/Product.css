@@ -1,0 +1,19 @@
+.sProductWrap > div:first-child {
+  margin-bottom: 16px;
+}
+/* .sProductWrap > div:last-child{
+    
+} */
+
+.sProduct {
+  width: 330px;
+  height: 330px;
+  background-color: teal;
+}
+
+.bProduct {
+  width: 676px;
+  height: 676px;
+  background-color: violet;
+  margin: 0 15px;
+}

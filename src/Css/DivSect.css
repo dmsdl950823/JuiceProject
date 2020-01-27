@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Merriweather+Sans&display=swap');
+
+.smallAdImageWrap {
+  border: 1px solid blueviolet;
+  width: 560px;
+}
+
+.leftContents {
+  width: 787px;
+  height: 100%;
+  padding-top: 307px;
+}
+
+.leftContents a {
+  display: block;
+  height: 101%;
+  color: #fff;
+  line-height: 103px;
+  text-align: center;
+}
+
+.leftContents article {
+  float: left;
+}
+.leftContents article:first-child > div {
+  width: 207px;
+  height: 207px;
+}
+
+.leftContents article > div:first-child {
+  /* background-color: #80a29c; */
+  background-color: #91ae5b;
+  /* background-color: #86a6db; */
+}
+
+.leftContents article > div:last-child {
+  /* background-color: #4c675c; */
+  background-color: #71ab67;
+  /* background-color: #486ca9; */
+}
+
+.ractBox {
+  width: 103px;
+  height: 103px;
+}
+
+.hovBtn {
+  position: relative;
+}
+
+.button_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0) 70.71%
+  );
+  transition: all 0.1s ease-in;
+  opacity: 0;
+}
+.hovBtn:hover .button_hover {
+  opacity: 1;
+}
+
+.membership {
+  width: 103px;
+  height: 206px;
+  padding-top: 103px;
+}
+
+.Acc {
+  font-size: 30px;
+  line-height: 103px;
+}
+
+.Cart {
+  background: url(./../images/cart_03.png) no-repeat 50% 50%;
+  /* background-color: #a3c4be; */
+  background-color: #bbd275;
+  /* background-color: #2658ac; */
+}
+
+.Buybtn {
+  /* background-color: #283f36; */
+  background-color: #315d22;
+  /* background-color: #193b74; */
+}
+
+.viewMore {
+  width: 100%;
+  height: 103px;
+}
+
+.leftContents article:last-child {
+  width: 580px;
+  /* border: 1px solid red; */
+}
+
+.explnationWrap {
+}
+
+.explnation {
+  display: block;
+  margin-top: 65px;
+  font-size: 10px;
+  width: 233px;
+  margin-left: 82px;
+}
+
+h3.productName {
+  transition: all 0.5s ease-in;
+  width: 100%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 58px;
+  text-align: right;
+  overflow: hidden;
+}
+.productName > p {
+  width: 580px;
+}
+
+.explnationWrap:hover + .productName {
+  width: 0%;
+  white-space: nowrap;
+  text-overflow: hidden;
+}
+
+.rightInfo {
+  width: 491px;
+  height: 100%;
+  padding-left: 374px;
+}
+
+/* right info */
+.currentPage {
+  width: 100%;
+  height: 629px;
+  position: relative;
+}
+
+.currentPage > ul {
+  width: 15px;
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+}
+
+.currentPage > ul > li {
+  transition: 0.1s ease-in;
+  width: 15px;
+  height: 15px;
+  float: left;
+  border: 1px solid #a3c4be;
+  font-size: 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.currentPage > ul > li.on {
+  border: 1px solid #3c571d;
+  transform: rotate(45deg);
+}
+
+.socialM {
+  margin-bottom: 65px;
+}
+
+.socialM ul {
+  float: right;
+}
+.socialM ul li {
+  width: 27px;
+  height: 27px;
+  float: left;
+  margin-left: 27px;
+}
+
+.socialM ul li:first-child {
+  background: url(./../images/sns1.png);
+}
+.socialM ul li:last-child {
+  background: url(./../images/sns2.png);
+}
+
+.socialM ul li a {
+  display: block;
+  height: 100%;
+}
