@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 export default class RightInfo extends Component {
   render() {
     return (
-      <div className="rightInfo flt_left">
+      <div className="rightInfo flt_right">
         <div className="currentPage cf">
-          <CurrentPageUl currList="currentList" />
+          <CurrentPageUl currList={this.props.currpage} />
         </div>
 
         <div className="socialM cf">
@@ -29,24 +29,39 @@ export default class RightInfo extends Component {
 }
 
 class CurrentPageUl extends Component {
-  render() {
-    let i = 0;
-    const currListArr = [];
+  state = {
+    index: this.props.currList,
+  };
 
-    while (i < 3) {
-      currListArr.push(
-        <li key={i} onClick={this._newCom(i)}>
-          {i}
-        </li>,
-      );
+  render() {
+    return (
+      <ul className="cf">
+        <li className="lists on" onClick={this._newCom.bind(this)}></li>
+        {/*  onClick={this._newCom.bind(this)} */}
+        <li className="lists" onClick={this._newCom.bind(this)}></li>
+        <li className="lists" onClick={this._newCom.bind(this)}></li>
+      </ul>
+    );
+  }
+
+  _newCom(e) {
+    const lists = document.querySelectorAll('.lists'); // li lists
+    let i = 0;
+    let j = 0;
+    while (i < lists.length) {
+      lists[i].classList.remove('on');
       i = i + 1;
     }
 
-    return <ul className="cf">{currListArr}</ul>;
-  }
+    e.target.classList.add('on'); // addclass 'on'
 
-  _newCom(i) {
-    // 수정필요
-    console.log(i);
+    while (j < lists.length) {
+      if (lists[j].classList.length === 2) {
+        this.setState({
+          index: j,
+        });
+      }
+      j = j + 1;
+    }
   }
 }

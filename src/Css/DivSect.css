@@ -28,15 +28,13 @@
 }
 
 .leftContents article > div:first-child {
-  /* background-color: #80a29c; */
-  background-color: #91ae5b;
-  /* background-color: #86a6db; */
+  transition: 0.5s ease-in;
+  background-color: #80a29c;
 }
 
 .leftContents article > div:last-child {
-  /* background-color: #4c675c; */
-  background-color: #71ab67;
-  /* background-color: #486ca9; */
+  transition: 0.5s ease-in;
+  background-color: #4c675c;
 }
 
 .ractBox {
@@ -79,16 +77,14 @@
 }
 
 .Cart {
+  transition: 0.5s ease-in;
   background: url(./../images/cart_03.png) no-repeat 50% 50%;
-  /* background-color: #a3c4be; */
-  background-color: #bbd275;
-  /* background-color: #2658ac; */
+  background-color: #a3c4be;
 }
 
 .Buybtn {
-  /* background-color: #283f36; */
-  background-color: #315d22;
-  /* background-color: #193b74; */
+  transition: 0.5s ease-in;
+  background-color: #283f36;
 }
 
 .viewMore {
@@ -119,21 +115,40 @@ h3.productName {
   font-size: 58px;
   text-align: right;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: hidden;
+
+  animation-name: hideContents;
+  animation-duration: 1.8s;
+  animation-timing-function: ease;
+  animation-direction: forward;
 }
 .productName > p {
   width: 580px;
 }
 
-.explnationWrap:hover + .productName {
-  width: 0%;
-  white-space: nowrap;
-  text-overflow: hidden;
+@keyframes hideContents {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes showContents {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .rightInfo {
-  width: 491px;
+  width: 200px;
   height: 100%;
-  padding-left: 374px;
+  margin-right: 91px;
 }
 
 /* right info */
