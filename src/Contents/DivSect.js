@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import $ from "jquery";
 
 import './../excss.css';
 import './../Css/DivSect.css';
@@ -16,7 +15,7 @@ class DivSect extends Component {
     return (
       <section className="sect red cf">
         <LeftInformations
-          explanation={this._explanation()}
+          // explanation={this._explanation()}
           idx={this.props.current.index}
         />
         <RightInfo />

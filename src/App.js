@@ -3,8 +3,8 @@ import FooterSect from './Contents/Footer';
 import Header from './Contents/Header';
 import Product from './Contents/Product';
 import DivSect from './Contents/DivSect';
+import anime from 'animejs/lib/anime.es.js';
 
-import SassComponent from './SassComponent';
 import './Css/Background.css';
 import './index.css';
 import './App.css';
@@ -16,9 +16,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <Background />
+        <Background current={this.state} />
         <Skipmenu />
-        <Wrapper current={this.state} />　{/* <SassComponent /> */}
+        <Wrapper current={this.state} />
       </div>
     );
   }
@@ -28,7 +28,7 @@ export default class App extends React.Component {
     let num = 0;
 
     setInterval(() => {
-      console.log(this.state.index);
+      // console.log(this.state.index);
 
       num += 1;
 
@@ -42,7 +42,7 @@ export default class App extends React.Component {
       if (num >= 2) {
         num = -1;
       }
-    }, 5000);
+    }, 8000);
   }
 
   _removeClass(lists) {
@@ -67,13 +67,15 @@ class Wrapper extends React.Component {
     return (
       <div id="container">
         <Header />
-        <DivSect current={this.props.current}/>
+        <DivSect current={this.props.current} />
       </div>
     );
   }
 }
 
-function Background() {
+function Background(current) {
+  // console.log(current);  // props.current
+
   return (
     <div className="backgroundWrapper">
       <ul className="backgroundColor cf">

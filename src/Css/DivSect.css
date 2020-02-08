@@ -8,19 +8,24 @@
 .leftContents {
   width: 787px;
   height: 100%;
-  padding-top: 307px;
+  position: relative;
 }
 
-.leftContents a {
+.lft_div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.leftContents article {
+  float: left;
+}
+.leftContents article:first-child a {
   display: block;
   height: 101%;
   color: #fff;
   line-height: 103px;
   text-align: center;
-}
-
-.leftContents article {
-  float: left;
 }
 .leftContents article:first-child > div {
   width: 207px;
@@ -98,36 +103,45 @@
 }
 
 .explnationWrap {
+  padding: 65px 0 0 82px;
 }
 
 .explnation {
   display: block;
-  margin-top: 65px;
+  position: relative;
   font-size: 10px;
   width: 233px;
-  margin-left: 82px;
+  height: 90px;
+}
+
+.explnation span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 h3.productName {
   transition: all 0.5s ease-in;
-  width: 100%;
+  /* width: 100%; */
+  width: 0;
   font-family: 'Abril Fatface', cursive;
   font-size: 58px;
-  text-align: right;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: hidden;
-
-  animation-name: hideContents;
+  padding-left: 82px;
+  /* animation-name: hideContents;
   animation-duration: 1.8s;
   animation-timing-function: ease;
-  animation-direction: forward;
+  animation-direction: forward; */
 }
 .productName > p {
-  width: 580px;
+  width: 500px;
 }
-
-@keyframes hideContents {
+.productName > p > span {
+  display: block;
+}
+/* @keyframes hideContents {
   0% {
     width: 100%;
   }
@@ -143,7 +157,7 @@ h3.productName {
   100% {
     width: 100%;
   }
-}
+} */
 
 .rightInfo {
   width: 200px;

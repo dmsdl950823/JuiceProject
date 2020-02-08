@@ -7,7 +7,8 @@ import Explanation from './Explanation';
 // left info
 export default class LeftInformations extends Component {
   state = {
-    status: this.props.explanation.id,
+    // status: this.props.explanation.id,
+    status: this.props.idx,
     buttonColors: [
       {
         topBigBox: '#80a29c',
@@ -34,66 +35,53 @@ export default class LeftInformations extends Component {
     this._changeColor(this.props.idx);
 
     return (
-      <div className="leftContents flt_left cf">
-        <article>
-          <div className="cf">
-            <div className="flt_left">
-              <p className="ractBox">
-                <a href="/" className="Acc hovBtn">
-                  <span className="button_hover"></span>
-                  <FontAwesomeIcon icon={faUser} />
-                  <span className="_skip">Sign in</span>
-                </a>
-              </p>
-              <p className="ractBox">
-                <a href="/" className="Cart hovBtn">
-                  <span className="button_hover"></span>
-                  <span className="_skip">Cart</span>
-                </a>
-              </p>
+      <div className="leftContents flt_left">
+        <div className="lft_div cf">
+          <article>
+            <div className="cf">
+              <div className="flt_left">
+                <p className="ractBox">
+                  <a href="/" className="Acc hovBtn">
+                    <span className="button_hover"></span>
+                    <FontAwesomeIcon icon={faUser} />
+                    <span className="_skip">Sign in</span>
+                  </a>
+                </p>
+                <p className="ractBox">
+                  <a href="/" className="Cart hovBtn">
+                    <span className="button_hover"></span>
+                    <span className="_skip">Cart</span>
+                  </a>
+                </p>
+              </div>
+              <div className="flt_left">
+                <p className="membership">
+                  <a href="/" className="hovBtn">
+                    <span className="button_hover"></span>
+                    MemberShip
+                  </a>
+                </p>
+              </div>
             </div>
-            <div className="flt_left">
-              <p className="membership">
+            <div className="cf">
+              <p className="ractBox flt_left"></p>
+              <p className="ractBox flt_left">
+                <a href="/" className="Buybtn hovBtn">
+                  <span className="button_hover"></span>
+                  Buy Now
+                </a>
+              </p>
+              <p className="viewMore flt_left">
                 <a href="/" className="hovBtn">
                   <span className="button_hover"></span>
-                  MemberShip
+                  View More
                 </a>
               </p>
             </div>
-          </div>
-          <div className="cf">
-            <p className="ractBox flt_left"></p>
-            <p className="ractBox flt_left">
-              <a href="/" className="Buybtn hovBtn">
-                <span className="button_hover"></span>
-                Buy Now
-              </a>
-            </p>
-            <p className="viewMore flt_left">
-              <a href="/" className="hovBtn">
-                <span className="button_hover"></span>
-                View More
-              </a>
-            </p>
-          </div>
-        </article>
+          </article>
 
-        <article>
-          <p className="explnationWrap">
-            <span className="explnation">
-              A course program that organizes all the cleanser programs of Mercy
-              Juice, which are specialized in excellent cleansing effects and
-              balanced nutritional supply, in a step-by-step manner to achieve a
-              more balanced and effective process.
-            </span>
-            {/* <Explanation currPage={this.props.explanation.id} /> */}
-          </p>
-          <h3 className="productName">
-            <p>TOTAL CLEANSER </p>
-            <p>3DAYS</p>
-          </h3>
-          {/* <ProductHeader currPage={this.props.explanation.id} /> */}
-        </article>
+          <Explanation currPage={this.props.idx} />
+        </div>
       </div>
     );
   }
@@ -122,16 +110,10 @@ export default class LeftInformations extends Component {
       // BottBigBox.style.backgroundColor = btnColor[idx].BottBigBox;
       // BottsmallBox.style.backgroundColor = btnColor[idx].BottsmallBox;
     } else {
-      console.log((topBigBox.style.backgroundColor = btnColor[idx].topBigBox));
-      console.log(
-        (topsmallBox.style.backgroundColor = btnColor[idx].topsmallBox),
-      );
-      console.log(
-        (BottBigBox.style.backgroundColor = btnColor[idx].BottBigBox),
-      );
-      console.log(
-        (BottsmallBox.style.backgroundColor = btnColor[idx].BottsmallBox),
-      );
+      topBigBox.style.backgroundColor = btnColor[idx].topBigBox;
+      topsmallBox.style.backgroundColor = btnColor[idx].topsmallBox;
+      BottBigBox.style.backgroundColor = btnColor[idx].BottBigBox;
+      BottsmallBox.style.backgroundColor = btnColor[idx].BottsmallBox;
     }
   }
 }
