@@ -77,18 +77,24 @@ class Background extends Component {
     this._animation(this.props.current);
     return (
       <div className="backgroundWrapper">
-        <ul className="backgroundColor cf">
+        <ul className="backgroundColor">
           <li className="back0 on">
-            <i></i>
-            <span></span>
+            <div className="back_division cf">
+              <i></i>
+              <span></span>
+            </div>
           </li>
           <li className="back1 ">
-            <i></i>
-            <span></span>
+            <div className="back_division cf">
+              <i></i>
+              <span></span>
+            </div>
           </li>
           <li className="back2 ">
-            <i></i>
-            <span></span>
+            <div className="back_division cf">
+              <i></i>
+              <span></span>
+            </div>
           </li>
         </ul>
       </div>
@@ -96,24 +102,31 @@ class Background extends Component {
   }
 
   _animation(crt) {
+    const backColor = ['#cce1e8', '#fbf9c0', '#a2bff0'];
+
     console.log(crt);
 
+    console.log('ddkdkdkdk');
     let backNum = '.back' + crt;
     let backOn = document.querySelector(backNum);
+    let backClass = '.back' + crt + '.on';
 
     const backImgs = document.querySelectorAll('.backgroundColor li');
     if (backImgs.length !== 0) {
       for (let i = 0; i < backImgs.length; i++) {
-        console.log(backImgs[i].classList.remove('on'));
+        backImgs[i].classList.remove('on');
+        backImgs[i].firstChild.firstChild.style.width = '0';
       }
     }
 
     if (backOn !== null) {
-      console.log(document.querySelector(backNum).classList.add('on'));
+      backOn.classList.add('on');
+      backOn.firstChild.firstChild.style.backgroundColor = backColor[crt];
+      anime({
+        targets: backClass + '.on i',
+        width: '40%',
+        duration: 1000,
+      });
     }
-    anime({
-      targets: '.css-selector-demo .el',
-      translateX: 250,
-    });
   }
 }
