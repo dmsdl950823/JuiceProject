@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ProductHeader from './ProductHeader';
 import Explanation from './Explanation';
 
 // left info

@@ -47,26 +47,26 @@
   float: left;
 }
 
-.back1 {
+.back0 {
   background-color: #e1ecf0;
 }
-.back1 span {
+.back0 span {
   /* background-size: cover; */
   background: url(../images/bck_img1.jpg) no-repeat 50% -40px / 1500px;
 }
 
-.back2 {
+.back1 {
   background-color: #ffffd3;
 }
-.back2 span {
+.back1 span {
   /* background-size: cover; */
   background: url(../images/bck_img2.jpg) no-repeat 70% -40px / 1400px;
 }
 
-.back3 {
+.back2 {
   background-color: #bcd5ff;
 }
-.back3 span {
+.back2 span {
   /* background-size: cover; */
   background: url(/static/media/bck_img3.60db68a9.jpg) no-repeat 165% -170px / 1500px;
 }

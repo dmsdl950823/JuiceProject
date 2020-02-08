@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { HelpBlock } from 'react-bootstrap';
 import anime from 'animejs/lib/anime.es.js';
 
 export default class Explanation extends Component {
@@ -55,7 +54,7 @@ export default class Explanation extends Component {
   render() {
     // console.log(this.props.currPage + ' expl');
     // console.log();
-    this._animationTitle();
+    this._animationTitle(this.props.currPage);
     return (
       <article>
         <p className="explnationWrap">
@@ -71,13 +70,35 @@ export default class Explanation extends Component {
     );
   }
 
-  _animationTitle() {
-    const tit = document.querySelector('.productName');
-    if (tit !== null) {
-      anime({
-        targets: '.productName',
-        width: '100%',
-      });
+  componentDidMount() {
+    const pdName = document.querySelector('.productName');
+    pdName.style.width = '100%';
+    anime({
+      targets: '.productName',
+      width: '0%',
+      duration: 1000,
+      delay: 7000,
+    });
+  }
+
+  _animationTitle(page) {
+    let curr = page;
+    let changePage = page + 1;
+    if (changePage === 3) {
+      changePage = 0;
+    }
+
+    const pdName = document.querySelector('.productName');
+
+    if (pdName !== null) {
+      console.log(page, changePage);
+      if (changePage !== page) {
+        anime({
+          targets: '.productName',
+          duration: 1000,
+          width: '100%',
+        });
+      }
     }
   }
 }

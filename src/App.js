@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import FooterSect from './Contents/Footer';
 import Header from './Contents/Header';
-import Product from './Contents/Product';
+// import Product from './Contents/Product';
 import DivSect from './Contents/DivSect';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -9,14 +8,14 @@ import './Css/Background.css';
 import './index.css';
 import './App.css';
 
-export default class App extends React.Component {
+export default class App extends Component {
   state = {
     index: 0,
   };
   render() {
     return (
       <div id="wrapper">
-        <Background current={this.state} />
+        <Background current={this.state.index} />
         <Skipmenu />
         <Wrapper current={this.state} />
       </div>
@@ -62,7 +61,7 @@ function Skipmenu() {
   );
 }
 
-class Wrapper extends React.Component {
+class Wrapper extends Component {
   render() {
     return (
       <div id="container">
@@ -73,25 +72,48 @@ class Wrapper extends React.Component {
   }
 }
 
-function Background(current) {
-  // console.log(current);  // props.current
+class Background extends Component {
+  render() {
+    this._animation(this.props.current);
+    return (
+      <div className="backgroundWrapper">
+        <ul className="backgroundColor cf">
+          <li className="back0 on">
+            <i></i>
+            <span></span>
+          </li>
+          <li className="back1 ">
+            <i></i>
+            <span></span>
+          </li>
+          <li className="back2 ">
+            <i></i>
+            <span></span>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 
-  return (
-    <div className="backgroundWrapper">
-      <ul className="backgroundColor cf">
-        <li className="back1 on">
-          <i></i>
-          <span></span>
-        </li>
-        <li className="back2 ">
-          <i></i>
-          <span></span>
-        </li>
-        <li className="back3 ">
-          <i></i>
-          <span></span>
-        </li>
-      </ul>
-    </div>
-  );
+  _animation(crt) {
+    console.log(crt);
+
+    let backNum = '.back' + crt;
+    let backOn = document.querySelector(backNum);
+
+    const backImgs = document.querySelectorAll('.backgroundColor li');
+    if (backImgs.length !== 0) {
+      for (let i = 0; i < backImgs.length; i++) {
+        console.log(backImgs[i].classList.remove('on'));
+      }
+    }
+
+    if (backOn !== null) {
+      console.log(document.querySelector(backNum).classList.add('on'));
+    }
+    anime({
+      targets: '.css-selector-demo .el',
+      translateX: 250,
+    });
+  }
 }
