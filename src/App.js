@@ -105,17 +105,22 @@ class Background extends Component {
     const backColor = ['#cce1e8', '#fbf9c0', '#a2bff0'];
 
     console.log(crt);
-
-    console.log('ddkdkdkdk');
     let backNum = '.back' + crt;
     let backOn = document.querySelector(backNum);
     let backClass = '.back' + crt + '.on';
-
     const backImgs = document.querySelectorAll('.backgroundColor li');
+    const lft_back = document.createElement('p');
+    const lft_back_class = lft_back.classList.add('beforeBack');
+
     if (backImgs.length !== 0) {
       for (let i = 0; i < backImgs.length; i++) {
         backImgs[i].classList.remove('on');
         backImgs[i].firstChild.firstChild.style.width = '0';
+
+        if (backImgs[i].childNodes.length >= 2) {
+          console.log(backImgs[i].childNodes[1].remove());
+          // console.log(backImgs[i].childNodes[1]);
+        }
       }
     }
 
@@ -126,7 +131,13 @@ class Background extends Component {
         targets: backClass + '.on i',
         width: '40%',
         duration: 1000,
+        easing: 'easeInOutQuart',
       });
+
+      if (backOn.classList[1] === 'on') {
+        const insert_back = backOn.appendChild(lft_back);
+        // backOn.insertBefore(insert_back, backOn.firstChild);
+      }
     }
   }
 }
