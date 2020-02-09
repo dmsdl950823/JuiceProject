@@ -103,6 +103,7 @@ class Background extends Component {
 
   _animation(crrt) {
     const backColor = ['#cce1e8', '#fbf9c0', '#a2bff0'];
+    const right_backColor = ['#e1ecf0', '#ffffd3', '#bcd5ff'];
 
     let backNum = '.back' + crrt;
     let backOn = document.querySelector(backNum);
@@ -115,6 +116,8 @@ class Background extends Component {
       for (let i = 0; i < backImgs.length; i++) {
         backImgs[i].classList.remove('on');
         backImgs[i].lastChild.firstChild.style.width = '0';
+        // backImgs[i].style.backgroundColor = right_backColor[crrt];
+        backImgs[i].lastChild.lastChild.style.opacity = 0;
 
         if (backImgs[i].firstChild.childNodes.length >= 3) {
           backImgs[i].firstChild.childNodes[0].remove();
@@ -147,6 +150,7 @@ class Background extends Component {
           }
           backOn.firstChild.querySelector('p').style.backgroundColor =
             backColor[count];
+          backOn.firstChild.querySelector('span').style.opacity = 1;
         }
       }
     }

@@ -56,32 +56,36 @@
 }
 
 .backgroundColor > li > div > span {
+  position: relative;
   display: block;
   width: 60%;
   height: 100%;
   float: right;
+  transition: 4s ease;
 }
 
-.back0 {
-  background-color: #e1ecf0;
-}
-.back0 span {
-  /* background-size: cover; */
-  background: url(../images/bck_img1.jpg) no-repeat 50% -40px / 1500px;
+.backgroundColor > li {
+  transition-delay: 0.2s;
+  transition: 2s ease;
+  background-color: transparent;
 }
 
-.back1 {
-  background-color: #ffffd3;
-}
-.back1 span {
-  /* background-size: cover; */
-  background: url(../images/bck_img2.jpg) no-repeat 70% -40px / 1400px;
+.backgroundColor > li > div > span:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
-.back2 {
-  background-color: #bcd5ff;
+.back0 span:after {
+  background: url(../images/bck_img1.jpg) no-repeat 15vw -15vh fixed;
 }
-.back2 span {
-  /* background-size: cover; */
-  background: url(/static/media/bck_img3.60db68a9.jpg) no-repeat 165% -170px / 1500px;
+.back1 span:after {
+  background: url(../images/bck_img2.jpg) no-repeat 15vw -15vh fixed;
+}
+.back2 span:after {
+  background: url(/static/media/bck_img3.60db68a9.jpg) no-repeat 15% -15vh fixed;
 }
