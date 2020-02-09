@@ -101,42 +101,53 @@ class Background extends Component {
     );
   }
 
-  _animation(crt) {
+  _animation(crrt) {
     const backColor = ['#cce1e8', '#fbf9c0', '#a2bff0'];
 
-    console.log(crt);
-    let backNum = '.back' + crt;
+    let backNum = '.back' + crrt;
     let backOn = document.querySelector(backNum);
-    let backClass = '.back' + crt + '.on';
+    let backClass = '.back' + crrt + '.on';
     const backImgs = document.querySelectorAll('.backgroundColor li');
     const lft_back = document.createElement('p');
-    const lft_back_class = lft_back.classList.add('beforeBack');
+    lft_back.classList.add('beforeBack');
 
     if (backImgs.length !== 0) {
       for (let i = 0; i < backImgs.length; i++) {
         backImgs[i].classList.remove('on');
-        backImgs[i].firstChild.firstChild.style.width = '0';
+        backImgs[i].lastChild.firstChild.style.width = '0';
 
-        if (backImgs[i].childNodes.length >= 2) {
-          console.log(backImgs[i].childNodes[1].remove());
-          // console.log(backImgs[i].childNodes[1]);
+        if (backImgs[i].firstChild.childNodes.length >= 3) {
+          backImgs[i].firstChild.childNodes[0].remove();
         }
       }
     }
 
     if (backOn !== null) {
       backOn.classList.add('on');
-      backOn.firstChild.firstChild.style.backgroundColor = backColor[crt];
+      backOn.lastChild.querySelector('i').style.backgroundColor =
+        backColor[crrt];
+
       anime({
-        targets: backClass + '.on i',
+        targets: backClass + ' i',
         width: '40%',
         duration: 1000,
         easing: 'easeInOutQuart',
       });
 
       if (backOn.classList[1] === 'on') {
-        const insert_back = backOn.appendChild(lft_back);
-        // backOn.insertBefore(insert_back, backOn.firstChild);
+        if (backOn.classList[1] !== null) {
+          backOn.firstChild.insertBefore(
+            lft_back,
+            backOn.firstChild.querySelector('i'),
+          );
+
+          let count = crrt - 1;
+          if (count === -1) {
+            count = 2;
+          }
+          backOn.firstChild.querySelector('p').style.backgroundColor =
+            backColor[count];
+        }
       }
     }
   }
