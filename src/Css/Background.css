@@ -70,6 +70,13 @@
   background-color: transparent;
 }
 
+.backgroundColor span {
+  opacity: 0;
+}
+.back0 span {
+  opacity: 1;
+}
+
 .backgroundColor > li > div > span:after {
   position: absolute;
   top: 0;
