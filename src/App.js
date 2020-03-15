@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Contents/Header';
-// import Product from './Contents/Product';
 import DivSect from './Contents/DivSect';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -103,11 +102,10 @@ class Background extends Component {
 
   _animation(crrt) {
     const backColor = ['#cce1e8', '#fbf9c0', '#a2bff0'];
-    const right_backColor = ['#e1ecf0', '#ffffd3', '#bcd5ff'];
 
     let backNum = '.back' + crrt;
-    let backOn = document.querySelector(backNum);
     let backClass = '.back' + crrt + '.on';
+    let backOn = document.querySelector(backNum);
     const backImgs = document.querySelectorAll('.backgroundColor li');
     const lft_back = document.createElement('p');
     lft_back.classList.add('beforeBack');
@@ -115,30 +113,45 @@ class Background extends Component {
     if (backImgs.length !== 0) {
       for (let i = 0; i < backImgs.length; i++) {
         backImgs[i].classList.remove('on');
-        backImgs[i].lastChild.firstChild.style.width = '0';
-        // backImgs[i].style.backgroundColor = right_backColor[crrt];
-        backImgs[i].lastChild.lastChild.style.opacity = 0;
 
-        if (backImgs[i].firstChild.childNodes.length >= 3) {
-          backImgs[i].firstChild.childNodes[0].remove();
+        const bkImgLast = backImgs[i].lastChild;
+        bkImgLast.firstChild.style.width = '0';
+        bkImgLast.lastChild.style.opacity = 0;
+
+        const bkImgfirstLength = backImgs[i].firstChild.childNodes;
+        if (bkImgfirstLength.length >= 3) {
+          bkImgfirstLength[0].remove();
         }
       }
     }
 
     if (backOn !== null) {
-      backOn.classList.add('on');
+      const backOnClass = backOn.classList;
+      backOnClass.add('on');
       backOn.lastChild.querySelector('i').style.backgroundColor =
         backColor[crrt];
+      
 
-      anime({
-        targets: backClass + ' i',
-        width: '40%',
-        duration: 1000,
-        easing: 'easeInOutQuart',
-      });
+      if (backOnClass[1] === 'on') {
+        const backMoving = document.querySelector(backClass + ' i')
+        
+        switch (backClass) {
+          case '.back0.on':
+            backMoving.style.transition = '0.7s cubic-bezier(0.76, 0, 0.24, 1)';
+            break;
+        
+          default:
+            backMoving.style.transition = '';
+        }
+        
+        anime({
+          targets: backClass + ' i',
+          width: '40%',
+          duration: 1000,
+          easing: 'easeInOutQuart',
+        });
 
-      if (backOn.classList[1] === 'on') {
-        if (backOn.classList[1] !== null) {
+        if (backOnClass[1] !== null) {
           backOn.firstChild.insertBefore(
             lft_back,
             backOn.firstChild.querySelector('i'),
@@ -153,6 +166,8 @@ class Background extends Component {
           backOn.firstChild.querySelector('span').style.opacity = 1;
         }
       }
+
+      
     }
   }
 }

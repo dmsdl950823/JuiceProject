@@ -53,6 +53,7 @@
   width: 40%;
   height: 100%;
   float: left;
+  
 }
 
 .backgroundColor > li > div > span {
@@ -94,5 +95,5 @@
   background: url(../images/bck_img2.jpg) no-repeat 15vw -15vh fixed;
 }
 .back2 span:after {
-  background: url(/static/media/bck_img3.60db68a9.jpg) no-repeat 15% -15vh fixed;
+  background: url(../images/bck_img3.jpg) no-repeat -20vw 0 / 100% 0;
 }
