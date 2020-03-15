@@ -53,7 +53,6 @@ export default class Explanation extends Component {
 
   render() {
     // console.log(this.props.currPage + ' expl');
-    // console.log();
     this._animationTitle(this.props.currPage);
     return (
       <article>
@@ -73,12 +72,15 @@ export default class Explanation extends Component {
   componentDidMount() {
     const pdName = document.querySelector('.productName');
     pdName.style.width = '100%';
-    anime({
-      targets: '.productName',
-      width: '0%',
-      duration: 1000,
-      delay: 7000,
-    });
+    // const productName = document.querySelector('.productName');
+    
+    // productName.style.opacity = 1;
+    // anime({
+    //   targets: '.productName',
+    //   width: '0%',
+    //   duration: 1000,
+    //   delay: 7000,
+    // });
   }
 
   _animationTitle(page) {
@@ -91,14 +93,18 @@ export default class Explanation extends Component {
     const pdName = document.querySelector('.productName');
 
     if (pdName !== null) {
-      console.log(page, changePage);
+      // console.log(page, changePage);
+      const productName = document.querySelector('.productName');
+
+      const _changePage = changePage + 1
       if (changePage !== page) {
         anime({
           targets: '.productName',
           duration: 1000,
-          width: '100%',
+          width: '100%'
         });
       }
+      
     }
   }
 }

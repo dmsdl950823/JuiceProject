@@ -130,6 +130,7 @@ h3.productName {
 }
 .productName > p {
   width: 500px;
+  transition: 1s ease;
 }
 .productName > p > span {
   display: block;
