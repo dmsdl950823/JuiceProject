@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import './../excss.css';
 import './../Css/DivSect.css';
 import LeftInformations from './LeftInformations';
 import RightInfo from './RightInfo';
@@ -13,9 +12,8 @@ class DivSect extends Component {
   render() {
     // red
     return (
-      <section className="sect red cf">
+      <section className="sect cf">
         <LeftInformations
-          // explanation={this._explanation()}
           idx={this.props.current.index}
         />
         <RightInfo />
