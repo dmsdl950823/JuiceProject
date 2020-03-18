@@ -12,6 +12,7 @@
     "animate.css": "^3.7.2",
     "animejs": "^3.1.0",
     "bootstrap": "^4.4.1",
+    "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,5 +62,6 @@
   },
   "devDependencies": {
     "prettier": "1.19.1"
-  }
+  },
+  "homepage": "https://dmsdl950823.github.io/mercy_juice.github.io/"
 }
