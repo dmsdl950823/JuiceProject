@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/mercy_juice.github.io/static/css/main.c19d369f.chunk.css",
+    "main.js": "/mercy_juice.github.io/static/js/main.fa1fa596.chunk.js",
+    "main.js.map": "/mercy_juice.github.io/static/js/main.fa1fa596.chunk.js.map",
+    "runtime-main.js": "/mercy_juice.github.io/static/js/runtime-main.5cc826ae.js",
+    "runtime-main.js.map": "/mercy_juice.github.io/static/js/runtime-main.5cc826ae.js.map",
+    "static/js/2.0ee106d3.chunk.js": "/mercy_juice.github.io/static/js/2.0ee106d3.chunk.js",
+    "static/js/2.0ee106d3.chunk.js.map": "/mercy_juice.github.io/static/js/2.0ee106d3.chunk.js.map",
+    "index.html": "/mercy_juice.github.io/index.html",
+    "precache-manifest.6f513350e4feee70be9f1f27c010a0d4.js": "/mercy_juice.github.io/precache-manifest.6f513350e4feee70be9f1f27c010a0d4.js",
+    "service-worker.js": "/mercy_juice.github.io/service-worker.js",
+    "static/css/main.c19d369f.chunk.css.map": "/mercy_juice.github.io/static/css/main.c19d369f.chunk.css.map",
+    "static/js/2.0ee106d3.chunk.js.LICENSE": "/mercy_juice.github.io/static/js/2.0ee106d3.chunk.js.LICENSE",
+    "static/media/Background.css": "/mercy_juice.github.io/static/media/bck_img3.667440e1.jpg",
+    "static/media/logo.png": "/mercy_juice.github.io/static/media/logo.f15a12cb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5cc826ae.js",
+    "static/js/2.0ee106d3.chunk.js",
+    "static/css/main.c19d369f.chunk.css",
+    "static/js/main.fa1fa596.chunk.js"
+  ]
+}
